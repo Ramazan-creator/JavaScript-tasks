@@ -1,4 +1,5 @@
 import {createElement} from '../render.js';
+import { AbstractComponent } from './AbstractComponent.js';
 
 function createFormBoard() {
     return (
@@ -6,20 +7,8 @@ function createFormBoard() {
       );
 }
 
-export class Board {
+export class Board  extends AbstractComponent {
   getTemplate() {
     return createFormBoard();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }
