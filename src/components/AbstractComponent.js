@@ -1,5 +1,6 @@
 import {createElement} from '../render.js';
 
+
 export class AbstractComponent {
   constructor() {
     if (new.target === AbstractComponent) {
@@ -8,20 +9,25 @@ export class AbstractComponent {
     this._element = null;
   }
 
+
   getTemplate() {
     throw new Error(`It's AbstractComponent method, please implement it! `);
   }
+
 
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
 
+
     return this.element;
   }
+
 
   removeElement() {
     this.element = null;
   }
+
 
 }

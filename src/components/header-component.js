@@ -1,6 +1,8 @@
 import {createElement} from '../render.js';
 import { AbstractComponent } from './AbstractComponent.js';
 
+
+
 function createHeaderComponentTemplate() {
     return (
         `<header class="board-app__header">
@@ -11,7 +13,8 @@ function createHeaderComponentTemplate() {
       );
 }
 
-export class HeaderComponent extends AbstractComponent {
+
+export class HeaderComponent extends AbstractComponent{
   getTemplate() {
     return createHeaderComponentTemplate();
   }
